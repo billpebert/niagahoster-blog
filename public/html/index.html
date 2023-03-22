@@ -10,77 +10,89 @@
 
     </head>
 
-    <body class="relative">
-        <div class="bg-gradientBlue relative">
-            <!-- Top Nav -->
-            <nav class="bg-transparent py-[22px] text-white sticky z-10">
-                <div class="container flex flex-col lg:flex-row gap-8 w-full">
-                    <div class="inline-flex justify-between">
-                        <a href="">
-                            <img src="/src/assets/images/logo-navbar.svg" alt="">
-                        </a>
-                        <button class="block lg:hidden" id="navToggler">
-                            <img src="/src/assets/svg/ic-menu.svg" width="24" height="24" alt="">
-                        </button>
-                    </div>
-                    <!-- NavLinks -->
-                    <div class="hidden lg:block w-full" id="niaga-navs">
-                        <section class="flex flex-col lg:flex-row lg:items-center w-full gap-4 lg:gap-0">
-                            <div class="flex flex-col lg:flex-row gap-4 lg:gap-10 lg:items-center font-semibold text-base lg:ml-auto">
-                                <a href="">
-                                    Hosting
-                                </a>
-                                <a href="">
-                                    VPS
-                                </a>
-                                <a href="">
-                                    Domain
-                                </a>
-                                <a href="">
-                                    Website
-                                </a>
-                                <a href="">
-                                    Kemitraan
-                                </a>
-                                <a href="">
-                                    Wawasan
-                                </a>
-                                <a href="">
-                                    Acara
-                                </a>
-                            </div>
-                            <div class="flex flex-col lg:flex-row gap-4 lg:items-center font-semibold text-base lg:ml-auto">
-                                <a href="">
-                                    <img src="/src/assets/svg/ic-cart.svg" width="18" height="19" alt="">
-                                </a>
-                                <a href="" class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
-                                    ID
-                                </a>
-                                <a href="" class="btn-outline-white">
-                                    Login
-                                </a>
-                            </div>
-                        </section>
-                    </div>
-    
+    <body class="relative bg-white">
+
+        <!-- Top Nav -->
+        <nav class="bg-gradientBlue py-[22px] text-white fixed w-full z-20" id="navigationBar">
+            <div class="container flex flex-col lg:flex-row gap-8 w-full">
+                <div class="inline-flex justify-between">
+                    <a href="">
+                        <img src="/src/assets/images/logo-navbar.svg" alt="">
+                    </a>
+                    <button class="block lg:hidden" id="navToggler">
+                        <img src="/src/assets/svg/ic-menu.svg" width="24" height="24" alt="">
+                    </button>
                 </div>
-            </nav>
+                <!-- NavLinks -->
+                <div class="hidden lg:block w-full" id="niaga-navs">
+                    <section class="flex flex-col lg:flex-row lg:items-center w-full gap-4 lg:gap-0">
+                        <div
+                            class="flex flex-col lg:flex-row gap-4 lg:gap-10 lg:items-center font-semibold text-base lg:ml-auto">
+                            <a href="">
+                                Hosting
+                            </a>
+                            <a href="">
+                                VPS
+                            </a>
+                            <a href="">
+                                Domain
+                            </a>
+                            <a href="">
+                                Website
+                            </a>
+                            <a href="">
+                                Kemitraan
+                            </a>
+                            <a href="">
+                                Wawasan
+                            </a>
+                            <a href="">
+                                Acara
+                            </a>
+                        </div>
+                        <div
+                            class="flex flex-col lg:flex-row gap-4 lg:items-center font-semibold text-base lg:ml-auto">
+                            <a href="">
+                                <img src="/src/assets/svg/ic-cart.svg" width="18" height="19" alt="">
+                            </a>
+                            <a href=""
+                                class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                                ID
+                            </a>
+                            <a href="" class="btn-outline-white">
+                                Login
+                            </a>
+                        </div>
+                    </section>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <div class="bg-gradientBlue relative mb-20 pt-20">
             <!-- Menu section -->
             <section class="bg-darkBlue p-3 relative z-10">
-                <ul class="container text-white text-base font-semibold flex lg:items-center lg:justify-center flex-nowrap overflow-x-auto overflow-y-hidden gap-5 lg:gap-10">
-                    <li class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                <ul
+                    class="container text-white text-base font-semibold flex lg:items-center lg:justify-center flex-nowrap overflow-x-auto overflow-y-hidden gap-5 lg:gap-10">
+                    <li
+                        class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
                         Tutorial
                     </li>
-                    <li class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                    <li
+                        class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
                         Digital Marketing
                     </li>
-                    <li class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                    <li
+                        class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
                         Web Development & Design
                     </li>
-                    <li class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                    <li
+                        class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
                         Insight Bisnis
                     </li>
-                    <li class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
+                    <li
+                        class="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]">
                         News & Updates
                     </li>
                 </ul>
@@ -95,20 +107,84 @@
                     Temukan artikel berisi solusi terbaik untuk segala permasalahan Anda
                 </p>
                 <div class="max-w-[540px] w-full">
-                    <input type="text" class="bg-white rounded-full px-8 py-3 outline-none border border-[#00183329] text-dark w-full bg-icSearch bg-no-repeat bg-[calc(100%-32px)_center] focus:ring-hosterBlue focus:ring-2 disabled:bg-[#F3F4F6] disabled:bg-icSearchDisabled focus:bg-icSearchFocus placeholder:text-grey" placeholder="Cari topic artikel yang ingin Anda cari . . .">
+                    <input type="text"
+                        class="bg-white rounded-full px-8 py-3 outline-none border border-[#00183329] text-dark w-full bg-icSearch bg-no-repeat bg-[calc(100%-32px)_center] focus:ring-hosterBlue focus:ring-2 disabled:bg-[#F3F4F6] disabled:bg-icSearchDisabled focus:bg-icSearchFocus placeholder:text-grey"
+                        placeholder="Cari topic artikel yang ingin Anda cari . . .">
                 </div>
             </header>
 
             <!-- ornament -->
-            <img src="/src/assets/images/circular_ornament01.svg" alt="" class="absolute -top-20 left-1/2 -translate-x-1/2 z-00">
+            <img src="/src/assets/images/circular_ornament01.svg" alt=""
+                class="absolute top-0 left-1/2 -translate-x-1/2 z-0">
+        </div>
+
+        <div class="container">
+            <div class="grid md:grid-cols-12 gap-[30px] lg:px-[125px]">
+                <div class="col-span-9">
+                    <!-- Artikel Terbaru -->
+                    <section class="flex flex-col gap-[36px]">
+                        <h3 class="inline-flex gap-4 items-center text-[32px] leading-[42px] font-bold text-dark">
+                            <img src="/src/assets/svg/ic-electric.svg" width="44" height="44" alt="">
+                            Artikel Terbaru
+                        </h3>
+                        <div class="flex flex-col gap-12">
+                            <div class="flex gap-8 lg:gap-[60px]">
+                                <div class="flex flex-col gap-4 max-w-[510px] w-full">
+                                    <!-- Author -->
+                                    <div class="inline-flex gap-3 items-center">
+                                        <img src="/src/assets/images/user-1.png" class="rounded-full" width="24"
+                                            height="24" alt="">
+                                        <p class="text-xs leading-5">
+                                            Nida Regita F
+                                        </p>
+                                    </div>
+                                    <!-- Article Preview -->
+                                    <div>
+                                        <h4 class="text-base font-bold">
+                                            4+ Cara Mudah Cek IP Hosting Website
+                                        </h4>
+                                        <p class="mt-2 text-[12px] text-slateGrey max-h-8 line-clamp-3 md:line-clamp-2">
+                                            Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang
+                                            tepat!
+                                            IP hosting adalah barisan angka sebagai identitas unik dari suatu hosting
+                                            ...
+                                        </p>
+                                    </div>
+                                    <!-- Article Detail -->
+                                    <ul class="inline-flex">
+                                        <li class="rounded-full px-4 py-[2px] bg-lightBlue first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0">
+                                            <p class="text-xs leading-6 text-hosterBlue">Hosting</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <img src="/src/assets/images/thumbnail-default.png"
+                                    class="rounded-[5px] object-cover w-[255px] h-[164px]" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </div>
 
         <script type="text/javascript">
+            const navElement = document.getElementById('navigationBar')
             const nav = document.getElementById('niaga-navs')
+
             const showNav = () => {
                 nav.classList.toggle('hidden')
             }
             document.getElementById('navToggler').addEventListener('click', showNav)
+
+            document.addEventListener('scroll', (event) => {
+                // console.log(window.pageYOffset)
+                if (window.pageYOffset > 80) {
+                    navElement.classList.add('bg-gradientBlue')
+                    navElement.classList.remove('bg-transparent')
+                } else {
+                    navElement.classList.remove('bg-gradientBlue')
+                    navElement.classList.add('bg-transparent')
+                }
+            })
         </script>
     </body>
 
