@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-nunito
+    }
+}
+
+@layer utilities {
+    /* $card-background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
+$blue-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+
+$yello-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32); */
+}
+
+@layer components {
+    .btn-outline-white {
+        @apply rounded-full border border-white px-6 py-[10px] gap-2 inline-flex justify-center text-white font-bold text-sm leading-4
+    }
+}
