@@ -10,14 +10,73 @@
 }
 
 @layer utilities {
-    /* $card-background: linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%);
-$blue-shadow: 0px 32px 72px rgba(0, 87, 178, 0.16);
+    .filter-paginationOutline {
+        filter: brightness(0) saturate(100%) invert(85%) sepia(9%) saturate(134%) hue-rotate(177deg) brightness(107%) contrast(85%);
+    }
+    #flip {
+        height: 64px;
+        overflow: hidden;
+    }
 
-$yello-shadow: 0px 8px 10px rgba(255, 176, 77, 0.32); */
+    #flip>div>span {
+        height: 45px;
+        margin-bottom: 45px;
+        display: inline-block;
+    }
+
+    #flip div:first-child {
+        animation-name: show;
+        animation-duration: 7s;
+        animation-timing-function: linear;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes show {
+        0% {
+            margin-top: -270px;
+        }
+    
+        12.5% {
+            margin-top: -270px;
+        }
+    
+        25% {
+            margin-top: -180px;
+        }
+    
+        37.5% {
+            margin-top: -180px;
+        }
+    
+        50% {
+            margin-top: -90px;
+        }
+    
+        62.5% {
+            margin-top: -90px;
+        }
+    
+        75% {
+            margin-top: 0px;
+        }
+    
+        87.5% {
+            margin-top: 0px;
+        }
+    
+        100% {
+            margin-top: 0px;
+        }
+    }
 }
 
 @layer components {
     .btn-outline-white {
-        @apply rounded-full border border-white px-6 py-[10px] gap-2 inline-flex justify-center text-white font-bold text-sm leading-4
+        @apply rounded-full border border-white px-6 py-[10px] gap-2 inline-flex justify-center text-white font-bold text-sm leading-4 text-center
+    }
+
+    .btn-yellow {
+        @apply rounded-full px-[64px] py-3 bg-hosterYellow gap-2 inline-flex justify-center text-white font-bold text-xl shadow-[0_8px_10px_rgba(255,176,77,0.32)] text-center
     }
 }
