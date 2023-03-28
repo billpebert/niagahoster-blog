@@ -1213,6 +1213,10 @@ body{
   margin-top: 62px;
 }
 
+.ml-auto{
+  margin-left: auto;
+}
+
 .block{
   display: block;
 }
@@ -1263,6 +1267,10 @@ body{
 
 .h-\[54px\]{
   height: 54px;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .max-h-12{
@@ -1349,6 +1357,10 @@ body{
 
 .shrink-0{
   flex-shrink: 0;
+}
+
+.shrink{
+  flex-shrink: 1;
 }
 
 .-translate-x-1\/2{
@@ -1816,6 +1828,10 @@ body{
   padding-bottom: 1rem;
 }
 
+.pb-\[42px\]{
+  padding-bottom: 42px;
+}
+
 .pt-2{
   padding-top: 0.5rem;
 }
@@ -1830,10 +1846,6 @@ body{
 
 .pt-8{
   padding-top: 2rem;
-}
-
-.pb-\[42px\]{
-  padding-bottom: 42px;
 }
 
 .text-left{
@@ -1906,6 +1918,10 @@ body{
   font-weight: 600;
 }
 
+.\!leading-5{
+  line-height: 1.25rem !important;
+}
+
 .leading-4{
   line-height: 1rem;
 }
@@ -1932,10 +1948,6 @@ body{
 
 .leading-\[64px\]{
   line-height: 64px;
-}
-
-.\!leading-5{
-  line-height: 1.25rem !important;
 }
 
 .tracking-\[-0\.02em\]{
@@ -2200,6 +2212,12 @@ body{
   content: var(--tw-content);
 }
 
+.hover\:scale-110:hover{
+  --tw-scale-x: 1.1;
+  --tw-scale-y: 1.1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:border-gray-300:hover{
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
@@ -2425,6 +2443,10 @@ body{
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:min-w-\[255px\]{
+    min-width: 255px;
   }
 
   .lg\:flex-row{
