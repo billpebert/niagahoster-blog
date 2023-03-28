@@ -10,6 +10,14 @@
 }
 
 @layer utilities {
+
+    .shadow-yellow-1 {
+        @apply shadow-[0_8px_10px_rgba(255,176,77,0.32)]
+    }
+    .shadow-yellow-2 {
+        @apply shadow-[0_4px_6px_rgba(255,176,77,0.24)]
+    }
+
     .filter-paginationOutline {
         filter: brightness(0) saturate(100%) invert(85%) sepia(9%) saturate(134%) hue-rotate(177deg) brightness(107%) contrast(85%);
     }
@@ -77,6 +85,6 @@
     }
 
     .btn-yellow {
-        @apply rounded-full px-[64px] py-3 bg-hosterYellow gap-2 inline-flex justify-center text-white font-bold text-xl shadow-[0_8px_10px_rgba(255,176,77,0.32)] text-center
+        @apply rounded-full px-[64px] py-3 bg-hosterYellow gap-2 inline-flex justify-center text-white font-bold text-xl text-center
     }
 }

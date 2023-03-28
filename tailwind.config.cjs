@@ -3,7 +3,8 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    "./public/**/*.html"
+    "./public/**/*.html",
+    "./node_modules/flowbite/**/*.js"
   ],
   theme: {
     fontFamily: {
@@ -39,5 +40,6 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/line-clamp'),
+    require('flowbite/plugin')
   ],
 }
