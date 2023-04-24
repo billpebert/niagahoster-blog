@@ -1157,6 +1157,16 @@ body{
   grid-column: span 9 / span 9;
 }
 
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-1{
   margin-bottom: 0.25rem;
 }
@@ -1343,6 +1353,10 @@ body{
   max-width: 540px;
 }
 
+.max-w-\[635px\]{
+  max-width: 635px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -1454,6 +1468,10 @@ body{
   align-items: center;
 }
 
+.items-baseline{
+  align-items: baseline;
+}
+
 .justify-start{
   justify-content: flex-start;
 }
@@ -1512,6 +1530,14 @@ body{
 
 .gap-\[46px\]{
   gap: 46px;
+}
+
+.gap-9{
+  gap: 2.25rem;
+}
+
+.gap-6{
+  gap: 1.5rem;
 }
 
 .gap-x-20{
@@ -1838,6 +1864,14 @@ body{
 
 .pt-8{
   padding-top: 2rem;
+}
+
+.pb-14{
+  padding-bottom: 3.5rem;
+}
+
+.pb-20{
+  padding-bottom: 5rem;
 }
 
 .text-left{
@@ -2178,9 +2212,20 @@ body{
   content: var(--tw-content);
 }
 
+.after\:mx-\[6px\]::after{
+  content: var(--tw-content);
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
 .after\:ml-\[2px\]::after{
   content: var(--tw-content);
   margin-left: 2px;
+}
+
+.after\:h-4::after{
+  content: var(--tw-content);
+  height: 1rem;
 }
 
 .after\:max-h-\[24px\]::after{
@@ -2188,8 +2233,23 @@ body{
   max-height: 24px;
 }
 
+.after\:w-4::after{
+  content: var(--tw-content);
+  width: 1rem;
+}
+
 .after\:content-\[url\(\'\/src\/assets\/svg\/ic-arrow_down\.svg\'\)\]::after{
   --tw-content: url('/src/assets/svg/ic-arrow_down.svg');
+  content: var(--tw-content);
+}
+
+.after\:content-\[url\(\'\/src\/assets\/svg\/ic-arrow_right\.svg\'\)\]::after{
+  --tw-content: url('/src/assets/svg/ic-arrow_right.svg');
+  content: var(--tw-content);
+}
+
+.after\:content-\[url\(\'\/src\/assets\/svg\/ic-arrow_right-16x16\.svg\'\)\]::after{
+  --tw-content: url('/src/assets/svg/ic-arrow_right-16x16.svg');
   content: var(--tw-content);
 }
 
@@ -2201,6 +2261,37 @@ body{
 
 .first\:before\:content-\[\'\'\]:first-child::before{
   --tw-content: '';
+  content: var(--tw-content);
+}
+
+.last\:content-none:last-child{
+  --tw-content: none;
+  content: var(--tw-content);
+}
+
+.last\:content-\[\'\'\]:last-child{
+  --tw-content: '';
+  content: var(--tw-content);
+}
+
+.last\:content-\[\'\#\'\]:last-child{
+  --tw-content: '#';
+  content: var(--tw-content);
+}
+
+.last\:content-\[\'none\'\]:last-child{
+  --tw-content: 'none';
+  content: var(--tw-content);
+}
+
+.last\:after\:mx-0:last-child::after{
+  content: var(--tw-content);
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.last\:after\:content-none:last-child::after{
+  --tw-content: none;
   content: var(--tw-content);
 }
 
