@@ -2468,6 +2468,14 @@ body{
 }
 
 @media (min-width: 1536px){
+  .\32xl\:h-\[150px\]{
+    height: 150px;
+  }
+
+  .\32xl\:h-\[160px\]{
+    height: 160px;
+  }
+
   .\32xl\:px-\[125px\]{
     padding-left: 125px;
     padding-right: 125px;
