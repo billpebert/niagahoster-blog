@@ -87,4 +87,8 @@
     .btn-yellow {
         @apply rounded-full px-[64px] py-3 bg-hosterYellow gap-2 inline-flex justify-center text-white font-bold text-xl text-center
     }
+
+    .btn-outline-yellow {
+        @apply rounded-full px-[64px] py-3 bg-white border border-hosterYellow gap-2 inline-flex justify-center text-hosterYellow font-bold text-xl text-center disabled:text-grey disabled:border-grey
+    }
 }
