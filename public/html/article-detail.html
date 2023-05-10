@@ -98,103 +98,106 @@
             </section>
         </div>
 
-        <main class="relative container">
+        <div class="container grid grid-cols-12 gap-[30px]">
             <!-- Following content - page details -->
-            <section class="pt-12 pr-9 max-w-[255px] absolute divide-y divide-paginationOutline">
-                <div class="flex flex-col gap-4 pb-6">
-                    <!-- Breadcrumb -->
-                    <ul class="inline-flex items-center">
-                        <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
-                            <a href="#" class="text-hosterBlue hover:text-darkBlue">
-                                Home
-                            </a>
-                        </li>
-                        <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
-                            <a href="#" class="text-hosterBlue hover:text-darkBlue">
-                                Tutorial
-                            </a>
-                        </li>
-                        <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
-                            <a href="#" class="text-hosterBlue hover:text-darkBlue">
-                                Hosting
-                            </a>
-                        </li>
-                    </ul>
-                    <h2 class="text-dark text-xl font-bold">
-                        4+ Cara Mudah Cek IP Hosting Website
-                    </h2>
-        
-                    <!-- Article Detail -->
-                    <!-- Author -->
-                    <div class="inline-flex gap-3 items-center">
-                        <img src="/src/assets/images/user-1.png" class="rounded-full" width="24" height="24"
-                            alt="">
-                        <p class="text-xs leading-5">
-                            Nida Regita F
-                        </p>
+            <div class="col-span-3 w-full h-full relative">
+                <section class="pt-24 pr-9 w-full max-w-[255px] divide-y divide-paginationOutline sticky top-12 -ml-96 transition-all opacity-0 select-none" id="pageDetailSummary">
+                    <div class="flex flex-col gap-4 pb-6">
+                        <!-- Breadcrumb -->
+                        <ul class="inline-flex items-center">
+                            <li
+                                class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
+                                <a href="#" class="text-hosterBlue hover:text-darkBlue">
+                                    Home
+                                </a>
+                            </li>
+                            <li
+                                class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
+                                <a href="#" class="text-hosterBlue hover:text-darkBlue">
+                                    Tutorial
+                                </a>
+                            </li>
+                            <li
+                                class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
+                                <a href="#" class="text-hosterBlue hover:text-darkBlue">
+                                    Hosting
+                                </a>
+                            </li>
+                        </ul>
+                        <h2 class="text-dark text-xl font-bold">
+                            4+ Cara Mudah Cek IP Hosting Website
+                        </h2>
+            
+                        <!-- Article Detail -->
+                        <!-- Author -->
+                        <div class="inline-flex gap-3 items-center">
+                            <img src="/src/assets/images/user-1.png" class="rounded-full" width="24" height="24"
+                                alt="">
+                            <p class="text-xs leading-5">
+                                Nida Regita F
+                            </p>
+                        </div>
+                        <ul class="inline-flex text-slateGrey">
+                            <li
+                                class="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
+                                <p class="text-xs leading-6">28 Dec 2021</p>
+                            </li>
+                            <li
+                                class="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
+                                <p class="text-xs leading-6">5 min read</p>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="inline-flex text-slateGrey">
-                        <li
-                            class="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-                            <p class="text-xs leading-6">28 Dec 2021</p>
-                        </li>
-                        <li
-                            class="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-                            <p class="text-xs leading-6">5 min read</p>
-                        </li>
-                    </ul>
-                </div>
-    
-                <!-- Action Button -->
-                <div class="inline-flex items-center gap-6 text-slateGrey pt-6">
-                    <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
-                        <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
-                        <p class="font-semibold text-xs">
-                            111
-                        </p>
-                    </a>
-                    <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
-                        <img src="/src/assets/svg/ic-comment.svg" alt="">
-                        <p class="font-semibold text-xs">
-                            4
-                        </p>
-                    </a>
-                    <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
-                        <img src="/src/assets/svg/ic-share.svg" alt="">
-                        <p class="font-semibold text-xs">
-                            Share
-                        </p>
-                    </a>
-                </div>
-            </section>
+        
+                    <!-- Action Button -->
+                    <div class="inline-flex items-center gap-6 text-slateGrey pt-6">
+                        <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
+                            <p class="font-semibold text-xs">
+                                111
+                            </p>
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-comment.svg" alt="">
+                            <p class="font-semibold text-xs">
+                                4
+                            </p>
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-share.svg" alt="">
+                            <p class="font-semibold text-xs">
+                                Share
+                            </p>
+                        </a>
+                    </div>
+                </section>
+            </div>
 
-            <div class="px-4 md:px-0 max-w-[635px] w-full mx-auto">
+            <!-- Main Article -->
+            <main class="px-4 md:px-0 max-w-[635px] w-full mx-auto col-span-7">
                 <div class="flex flex-col gap-9">
                     <!-- Breadcrumb -->
                     <ul class="inline-flex items-center">
                         <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
+                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
                             <a href="#" class="text-hosterBlue hover:text-darkBlue">
                                 Home
                             </a>
                         </li>
                         <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
+                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
                             <a href="#" class="text-hosterBlue hover:text-darkBlue">
                                 Tutorial
                             </a>
                         </li>
                         <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:content-none last:after:mx-0 inline-flex items-center">
+                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
                             <a href="#" class="text-hosterBlue hover:text-darkBlue">
                                 Hosting
                             </a>
                         </li>
                         <li
-                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none     last:after:mx-0 inline-flex items-center">
+                            class="text-xs text-slateGrey after:content-[url('/src/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
                             4+ Cara Mudah Cek IP Hosting Website
                         </li>
                     </ul>
@@ -253,8 +256,9 @@
                         </div>
                     </div>
 
+                    <!-- Thumbnail Image -->
                     <img src="/src/assets/images/default-1.png" width="100%" height="338"
-                        class="w-full h-auto md:h-[338px] object-cover rounded-[10px]" alt="">
+                        class="w-full h-auto md:h-[338px] object-cover rounded-[10px]" id="articleThumbnail" alt="">
 
                     <p class="text-lg !leading-8 tracking-[0.005em]">
                         Anda ingin tahu cara cek IP hosting? Selamat, Anda berada di halaman yang tepat!
@@ -422,8 +426,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
-        </main>
+            </main>
+        </div>
 
         <!-- Subscribe Card -->
         <section class="container mb-20">
@@ -923,6 +927,24 @@
                 nav.classList.toggle('hidden')
             }
             document.getElementById('navToggler').addEventListener('click', showNav)
+
+
+            // Follow scroll content
+            let pageSummary = document.getElementById('pageDetailSummary')
+            document.addEventListener('scroll', () => {
+                let coverThumbnail = document.getElementById('articleThumbnail')
+                if (window.scrollY > coverThumbnail.offsetTop + 300) {
+                    pageSummary.classList.remove('-ml-96')
+                    setTimeout(() => {
+                        pageSummary.classList.add('!opacity-100')
+                    }, 200);
+                } else {
+                    pageSummary.classList.remove('!opacity-100')
+                    setTimeout(() => {
+                        pageSummary.classList.add('-ml-96')
+                    }, 200);
+                }
+            })
         </script>
     </body>
 
