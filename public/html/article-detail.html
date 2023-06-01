@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Niagahoster</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
         <link rel="stylesheet" href="/public/html/style.css">
         <link rel="shortcut icon" href="/src/assets/images/logo-mark-white.svg" type="image/x-icon">
-
     </head>
 
     <body class="relative bg-white">
@@ -100,9 +100,11 @@
 
         <div class="container grid grid-cols-12 gap-[30px]">
             <!-- Following content - page details -->
-            <div class="col-span-3 w-full h-full relative">
-                <section class="pt-24 pr-9 w-full max-w-[255px] divide-y divide-paginationOutline sticky top-12 -ml-96 transition-all opacity-0 select-none" id="pageDetailSummary">
-                    <div class="flex flex-col gap-4 pb-6">
+            <div class="col-span-3 w-full h-full">
+                <section
+                    class="pt-24 pr-9 w-full max-w-[255px] sticky top-12 -ml-[1000px] transition-all opacity-0 select-none"
+                    id="pageDetailSummary">
+                    <div class="flex flex-col gap-4 pb-6 border-b border-paginationOutline">
                         <!-- Breadcrumb -->
                         <ul class="inline-flex items-center">
                             <li
@@ -127,12 +129,11 @@
                         <h2 class="text-dark text-xl font-bold">
                             4+ Cara Mudah Cek IP Hosting Website
                         </h2>
-            
+
                         <!-- Article Detail -->
                         <!-- Author -->
                         <div class="inline-flex gap-3 items-center">
-                            <img src="/src/assets/images/user-1.png" class="rounded-full" width="24" height="24"
-                                alt="">
+                            <img src="/src/assets/images/user-1.png" class="rounded-full" width="24" height="24" alt="">
                             <p class="text-xs leading-5">
                                 Nida Regita F
                             </p>
@@ -148,21 +149,21 @@
                             </li>
                         </ul>
                     </div>
-        
+
                     <!-- Action Button -->
-                    <div class="inline-flex items-center gap-6 text-slateGrey pt-6">
+                    <div class="inline-flex items-center gap-6 text-slateGrey pt-6" id="asideActionButton">
                         <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
                             <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
                             <p class="font-semibold text-xs">
                                 111
                             </p>
                         </a>
-                        <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                        <button type="button" class="inline-flex items-center gap-3 hover:opacity-50" data-open-thread>
                             <img src="/src/assets/svg/ic-comment.svg" alt="">
                             <p class="font-semibold text-xs">
                                 4
                             </p>
-                        </a>
+                        </button>
                         <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
                             <img src="/src/assets/svg/ic-share.svg" alt="">
                             <p class="font-semibold text-xs">
@@ -174,7 +175,7 @@
             </div>
 
             <!-- Main Article -->
-            <main class="px-4 md:px-0 max-w-[635px] w-full mx-auto col-span-7">
+            <main class="px-4 md:px-0 max-w-[635px] w-full mx-auto col-span-7" id="mainArticle">
                 <div class="flex flex-col gap-9">
                     <!-- Breadcrumb -->
                     <ul class="inline-flex items-center">
@@ -234,18 +235,21 @@
 
                             <!-- Action Button -->
                             <div class="inline-flex items-center gap-6">
+                                <!-- Thumbs -->
                                 <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
                                     <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
                                     <p class="font-semibold text-xs">
                                         111
                                     </p>
                                 </a>
-                                <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                                <!-- Comments -->
+                                <button type="button" class="inline-flex items-center gap-3 hover:opacity-50"
+                                    data-open-thread>
                                     <img src="/src/assets/svg/ic-comment.svg" alt="">
                                     <p class="font-semibold text-xs">
                                         4
                                     </p>
-                                </a>
+                                </button>
                                 <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
                                     <img src="/src/assets/svg/ic-share.svg" alt="">
                                     <p class="font-semibold text-xs">
@@ -412,12 +416,12 @@
                                 111
                             </p>
                         </a>
-                        <a href="#" class="inline-flex items-center gap-3 hover:opacity-50">
+                        <button type="button" class="inline-flex items-center gap-3 hover:opacity-50" data-open-thread>
                             <img src="/src/assets/svg/ic-comment.svg" class="w-9 h-9" alt="">
                             <p class="font-semibold text-xl">
                                 4
                             </p>
-                        </a>
+                        </button>
                         <a href="#" class="inline-flex items-center gap-3 ml-auto hover:opacity-50">
                             <img src="/src/assets/svg/ic-share.svg" class="w-9 h-9" alt="">
                             <p class="font-semibold text-xl">
@@ -428,6 +432,166 @@
                 </div>
             </main>
         </div>
+
+        <!-- drawer component -->
+        <aside id="drawer-comments-replies"
+            class="fixed top-0 right-0 z-40 h-screen overflow-y-auto transition-transform translate-x-full bg-white w-[355px] py-9 shadow-[-8px_0_32px_rgba(0,87,178,0.16)]"
+            tabindex="-1" aria-labelledby="drawer-right-label">
+            <!-- Header -->
+            <div class="relative w-full inline-flex justify-between items-center px-[30px]">
+                <h5 id="drawer-right-label" class="inline-flex items-center text-dark text-xl font-bold gap-3">
+                    <img src="/src/assets/svg/ic-comment.svg" alt="">
+                    Balasan
+                    <span class="text-hosterBlue">15</span>
+                </h5>
+                <!-- Button close drawer -->
+                <button type="button" aria-controls="drawer-comments-replies" id="closeCommentThread"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 inline-flex items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.4099 11.9999L19.7099 5.70994C19.8982 5.52164 20.004 5.26624 20.004 4.99994C20.004 4.73364 19.8982 4.47825 19.7099 4.28994C19.5216 4.10164 19.2662 3.99585 18.9999 3.99585C18.7336 3.99585 18.4782 4.10164 18.2899 4.28994L11.9999 10.5899L5.70994 4.28994C5.52164 4.10164 5.26624 3.99585 4.99994 3.99585C4.73364 3.99585 4.47824 4.10164 4.28994 4.28994C4.10164 4.47825 3.99585 4.73364 3.99585 4.99994C3.99585 5.26624 4.10164 5.52164 4.28994 5.70994L10.5899 11.9999L4.28994 18.2899C4.19621 18.3829 4.12182 18.4935 4.07105 18.6154C4.02028 18.7372 3.99414 18.8679 3.99414 18.9999C3.99414 19.132 4.02028 19.2627 4.07105 19.3845C4.12182 19.5064 4.19621 19.617 4.28994 19.7099C4.3829 19.8037 4.4935 19.8781 4.61536 19.9288C4.73722 19.9796 4.86793 20.0057 4.99994 20.0057C5.13195 20.0057 5.26266 19.9796 5.38452 19.9288C5.50638 19.8781 5.61698 19.8037 5.70994 19.7099L11.9999 13.4099L18.2899 19.7099C18.3829 19.8037 18.4935 19.8781 18.6154 19.9288C18.7372 19.9796 18.8679 20.0057 18.9999 20.0057C19.132 20.0057 19.2627 19.9796 19.3845 19.9288C19.5064 19.8781 19.617 19.8037 19.7099 19.7099C19.8037 19.617 19.8781 19.5064 19.9288 19.3845C19.9796 19.2627 20.0057 19.132 20.0057 18.9999C20.0057 18.8679 19.9796 18.7372 19.9288 18.6154C19.8781 18.4935 19.8037 18.3829 19.7099 18.2899L13.4099 11.9999Z"
+                            fill="#29384E" />
+                    </svg>
+
+                    <span class="sr-only">Close menu</span>
+                </button>
+            </div>
+            <form action="" class="pb-6 border-b border-paginationOutline mt-6 px-[30px]">
+                <textarea name="comment" id="comment" rows="5"
+                    class="text-sm bg-white rounded-[14px] p-[14px] outline-none border border-[#00183329] text-dark w-full focus:ring-hosterBlue focus:ring-2 disabled:bg-[#F3F4F6] placeholder:text-grey"
+                    placeholder="Write a comment"></textarea>
+                <div class="hidden justify-end items-center gap-3 mt-6 w-full" id="formCommentButton">
+                    <button type="button" class="text-sm text-hosterBlue py-3 px-6 font-bold">Cancel</button>
+                    <button type="button" class="btn-yellow shadow-yellow-1 !text-sm !px-6">
+                        Comment
+                    </button>
+                </div>
+            </form>
+
+
+            <!-- Replies section -->
+            <section class="px-[30px]">
+                <article class="relative py-6 border-b border-paginationOutline last:border-transparent flex flex-col gap-3">
+                    <!-- User -->
+                    <div class="inline-flex gap-3 items-center">
+                        <img src="/src/assets/images/user-2.png" class="rounded-full w-10 h-10 object-cover" alt="">
+                        <div>
+                            <h6 class="text-base font-semibold text-dark inline-flex gap-3 items-center">
+                                Adam Muiz
+                                <!-- if author -->
+                                <!-- <span>•</span>
+                                <span class="text-xs text-hosterBlue">Author</span> -->
+                            </h6>
+                            <p class="text-[#7F8895] text-xs">
+                                28 hari yang lalu
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-[14px] leading-[24px] text-dark break-words tracking-[0.005em]">
+                        makasih kak udah berbagi informasi hehe
+                    </p>
+                    <div class="inline-flex gap-2 items-center w-full">
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
+                            <!-- <span class="text-slateGrey text-xs font-semibold">1</span> -->
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-arrow_reply.svg" alt="">
+                            <!-- <span class="text-slateGrey text-xs font-semibold">1</span> -->
+                        </a>
+                        <button type="button" class="text-hosterBlue text-sm font-bold ml-auto hidden"
+                            id="hideReplies">Sembunyikan Balasan</button>
+                    </div>
+                </article>
+                <article class="relative py-6 border-b border-paginationOutline last:border-transparent flex flex-col gap-3">
+                    <!-- User -->
+                    <div class="inline-flex gap-3 items-center">
+                        <img src="/src/assets/images/user-2.png" class="rounded-full w-10 h-10 object-cover" alt="">
+                        <div>
+                            <h6 class="text-base font-semibold text-dark inline-flex gap-3 items-center">
+                                Adam Muiz
+                                <!-- if author -->
+                                <!-- <span>•</span>
+                                <span class="text-xs text-hosterBlue">Author</span> -->
+                            </h6>
+                            <p class="text-[#7F8895] text-xs">
+                                18 hari yang lalu
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-[14px] leading-[24px] text-dark break-words tracking-[0.005em]">
+                        Lagi coba host-tracker trial 30 day, bisa mantau uptime webiste, cukup membantu.
+                        Sebenarnya kalau mantau juga bisa pakai JetPack, cuma karena berhubung pluginnya berat jadi cari alternatif lain buat pantau.
+                    </p>
+                    <div class="inline-flex gap-2 items-center w-full">
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
+                            <!-- <span class="text-slateGrey text-xs font-semibold">1</span> -->
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-arrow_reply.svg" alt="">
+                            <!-- <span class="text-slateGrey text-xs font-semibold">1</span> -->
+                        </a>
+                        <button type="button" class="text-hosterBlue text-sm font-bold ml-auto hidden"
+                            id="hideReplies">Sembunyikan Balasan</button>
+                    </div>
+                </article>
+                <article class="relative py-6 border-b border-paginationOutline last:border-transparent flex flex-col gap-3">
+                    <!-- User -->
+                    <div class="inline-flex gap-3 items-center">
+                        <img src="/src/assets/images/user-2.png" class="rounded-full w-10 h-10 object-cover" alt="">
+                        <div>
+                            <h6 class="text-base font-semibold text-dark inline-flex gap-3 items-center">
+                                Adam Muiz
+                                <!-- if author -->
+                                <!-- <span>•</span>
+                                <span class="text-xs text-hosterBlue">Author</span> -->
+                            </h6>
+                            <p class="text-[#7F8895] text-xs">
+                                18 hari yang lalu
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-[14px] leading-[24px] text-dark break-words tracking-[0.005em]">
+                        kalau untuk cek kesehatan websitenya sendiri bagaimana gan ?
+                    </p>
+                    <div class="inline-flex gap-2 items-center w-full">
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-thumb_up.svg" alt="">
+                            <!-- <span class="text-slateGrey text-xs font-semibold">1</span> -->
+                        </a>
+                        <a href="#" class="inline-flex items-center gap-1 hover:opacity-50">
+                            <img src="/src/assets/svg/ic-arrow_reply.svg" alt="">
+                            <span class="text-slateGrey text-xs font-semibold">1</span>
+                        </a>
+                        <button type="button" class="text-hosterBlue text-sm font-bold ml-auto"
+                            id="hideReplies3">Sembunyikan Balasan</button>
+                    </div>
+
+                    <!-- Member replies -->
+                    <div class="ml-3 border-l-2 border-hosterBlue pl-6 flex flex-col gap-3" id="userReplies3">
+                        <!-- User -->
+                        <div class="inline-flex gap-3 items-center">
+                            <img src="/src/assets/images/user-2.png" class="rounded-full w-10 h-10 object-cover" alt="">
+                            <div>
+                                <h6 class="text-base font-semibold text-dark inline-flex gap-3 items-center">
+                                    Adam Muiz
+                                    <!-- if author -->
+                                    <span>•</span>
+                                    <span class="text-xs text-hosterBlue">Author</span>
+                                </h6>
+                                <p class="text-[#7F8895] text-xs">
+                                    3 hari yang lalu
+                                </p>
+                            </div>
+                        </div>
+                        <p class="text-[14px] leading-[24px] text-dark break-words tracking-[0.005em]">
+                            Bisa melakukan pengecekan melalui Urlvoid atau fitur secamanya, bisa juga melalui google di url <a href="#" class="text-hosterBlue">http://www.google.com/safebrowsing/diagnostic?site=namasiteanda</a> 
+                        </p>
+                    </div>
+                </article>
+            </section>
+        </aside>
 
         <!-- Subscribe Card -->
         <section class="container mb-20">
@@ -928,21 +1092,69 @@
             }
             document.getElementById('navToggler').addEventListener('click', showNav)
 
-
             // Follow scroll content
             let pageSummary = document.getElementById('pageDetailSummary')
+            let mainArticle = document.getElementById('mainArticle')
+            let coverThumbnail = document.getElementById('articleThumbnail')
+            let mainArticleBottom = mainArticle.offsetTop + mainArticle.offsetHeight
+            let asideActionButton = document.getElementById('asideActionButton')
             document.addEventListener('scroll', () => {
-                let coverThumbnail = document.getElementById('articleThumbnail')
+                // Page summary scroll effect
                 if (window.scrollY > coverThumbnail.offsetTop + 300) {
-                    pageSummary.classList.remove('-ml-96')
-                    setTimeout(() => {
-                        pageSummary.classList.add('!opacity-100')
-                    }, 200);
+                    pageSummary.classList.remove('-ml-[1000px]')
+                    pageSummary.classList.add('!opacity-100')
                 } else {
                     pageSummary.classList.remove('!opacity-100')
-                    setTimeout(() => {
-                        pageSummary.classList.add('-ml-96')
-                    }, 200);
+                    pageSummary.classList.add('-ml-[1000px]')
+                }
+
+                // Show/Hide pageSummary action button
+                if (window.scrollY > mainArticleBottom - window.innerHeight) {
+                    asideActionButton.classList.add('hidden')
+                } else {
+                    asideActionButton.classList.remove('hidden')
+                }
+
+            })
+        </script>
+
+        <!-- Flowbite drawer config -->
+        <script>
+            const $targetEl = document.getElementById('drawer-comments-replies')
+            const drawerConfig = {
+                placement: 'right',
+                backdrop: true,
+                bodyScrolling: false,
+                edge: false,
+                edgeOffset: '',
+                backdropClasses: 'bg-gray-900 bg-opacity-50 dark:bg-opacity-80 fixed inset-0 z-30'
+            }
+
+            const drawer = new Drawer($targetEl, drawerConfig)
+
+            let openThreadComments = document.querySelectorAll('[data-open-thread]');
+            Array.from(openThreadComments).forEach(link => {
+                link.addEventListener('click', function (event) {
+                    drawer.show()
+                });
+            });
+
+            document.getElementById('closeCommentThread').addEventListener('click', () => {
+                drawer.hide()
+            })
+        </script>
+
+        <!-- Comment form action button -->
+        <script>
+            let textareaComment = document.querySelector('textarea#comment')
+            let commentActionButton = document.getElementById('formCommentButton')
+            textareaComment.addEventListener('input', (e) => {
+                if (e.target.value != '') {
+                    commentActionButton.classList.remove('hidden')
+                    commentActionButton.classList.add('inline-flex')
+                } else {
+                    commentActionButton.classList.add('hidden')
+                    commentActionButton.classList.remove('inline-flex')
                 }
             })
         </script>
