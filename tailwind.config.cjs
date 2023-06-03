@@ -32,9 +32,9 @@ module.exports = {
       },
       backgroundImage: {
         gradientBlue: 'linear-gradient(249.77deg, #0094FF -1.99%, #007DFF 43.52%, #026CE8 95.86%)',
-        icSearch: 'url("/src/assets/svg/ic-search.svg")',
-        icSearchFocus: 'url("/src/assets/svg/ic-search-dark.svg")',
-        icSearchDisabled: 'url("/src/assets/svg/ic-search-disabled.svg")',
+        icSearch: 'url("/assets/svg/ic-search.svg")',
+        icSearchFocus: 'url("/assets/svg/ic-search-dark.svg")',
+        icSearchDisabled: 'url("/assets/svg/ic-search-disabled.svg")',
       }
     },
   },

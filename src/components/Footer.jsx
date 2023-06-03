@@ -285,7 +285,7 @@ export default function Footer() {
 						</div>
 						<div className="flex flex-col gap-8 min-w-[255px]">
 							<a href="#">
-								<img src="/src/assets/images/logo-footer.svg" alt="" />
+								<img src="/assets/images/logo-footer.svg" alt="" />
 							</a>
 							<p className="text-[14px] leading-6 text-white tracking-[0.02em] max-w-[255px]">
 								Misi kami adalah membantu jutaan orang memanfaatkan potensi yang ada di internet untuk
@@ -302,22 +302,22 @@ export default function Footer() {
 							</ul>
 							<div className="grid grid-cols-3 gap-[18px] w-max">
 								<a href="#">
-									<img src="/src/assets/svg/ic-facebook.svg" alt="" />
+									<img src="/assets/svg/ic-facebook.svg" alt="" />
 								</a>
 								<a href="#">
-									<img src="/src/assets/svg/ic-instagram.svg" alt="" />
+									<img src="/assets/svg/ic-instagram.svg" alt="" />
 								</a>
 								<a href="#">
-									<img src="/src/assets/svg/ic-linkedin.svg" alt="" />
+									<img src="/assets/svg/ic-linkedin.svg" alt="" />
 								</a>
 								<a href="#">
-									<img src="/src/assets/svg/ic-twitter.svg" alt="" />
+									<img src="/assets/svg/ic-twitter.svg" alt="" />
 								</a>
 								<a href="#">
-									<img src="/src/assets/svg/ic-tiktok.svg" alt="" />
+									<img src="/assets/svg/ic-tiktok.svg" alt="" />
 								</a>
 								<a href="#">
-									<img src="/src/assets/svg/ic-youtube.svg" alt="" />
+									<img src="/assets/svg/ic-youtube.svg" alt="" />
 								</a>
 							</div>
 						</div>

@@ -18,7 +18,7 @@ export default function Index() {
 				<Header />
 				{/* <!-- ornament --> */}
 				<img
-					src="/src/assets/images/circular_ornament01.svg"
+					src="/assets/images/circular_ornament01.svg"
 					alt=""
 					className="absolute top-0 left-1/2 -translate-x-1/2 z-0"
 				/>
@@ -31,7 +31,7 @@ export default function Index() {
 							<SectionHeading title={"Artikel Terbaru"} icon={"ic-electric"} />
 							<div className="flex flex-col gap-12">
 								<HorizontalArticleCard
-									userPhoto={"/src/assets/images/user-1.png"}
+									userPhoto={"/assets/images/user-1.png"}
 									userName={"Nida Regita F"}
 									title={"4+ Cara Mudah Cek IP Hosting Website"}
 									textContent={
@@ -40,7 +40,7 @@ export default function Index() {
 									category={"Hosting"}
 									duration={"8"}
 									date={"28 Dec 2022"}
-									thumbnail={"/src/assets/images/default-1.png"}
+									thumbnail={"/assets/images/default-1.png"}
 								/>
 							</div>
 							<div className="text-center">
@@ -51,7 +51,7 @@ export default function Index() {
 							<SectionHeading title={"Artikel Populer"} icon={"ic-fire"} />
 							<div className="flex flex-col gap-12">
 								<HorizontalArticleCard
-									userPhoto={"/src/assets/images/user-1.png"}
+									userPhoto={"/assets/images/user-1.png"}
 									userName={"Nida Regita F"}
 									title={"4+ Cara Mudah Cek IP Hosting Website"}
 									textContent={
@@ -60,7 +60,7 @@ export default function Index() {
 									category={"Hosting"}
 									duration={"8"}
 									date={"28 Dec 2022"}
-									thumbnail={"/src/assets/images/default-1.png"}
+									thumbnail={"/assets/images/default-1.png"}
 								/>
 							</div>
 							<div className="text-center">
@@ -74,7 +74,7 @@ export default function Index() {
 							<SectionHeading title={"Semua Artikel"} />
 							<div className="grid md:grid-cols-3 gap-x-[30px] gap-y-14">
 								<VerticalArticleCard
-									userPhoto={"/src/assets/images/user-1.png"}
+									userPhoto={"/assets/images/user-1.png"}
 									userName={"Nida Regita F"}
 									title={"4+ Cara Mudah Cek IP Hosting Website"}
 									textContent={
@@ -82,7 +82,7 @@ export default function Index() {
 									}
 									category={"Hosting"}
 									duration={"8"}
-									thumbnail={"/src/assets/images/default-1.png"}
+									thumbnail={"/assets/images/default-1.png"}
 								/>
 							</div>
 							<Pagination />

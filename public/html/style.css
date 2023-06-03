@@ -1890,7 +1890,7 @@ body{
 }
 
 .bg-icSearch{
-  background-image: url("/src/assets/svg/ic-search.svg");
+  background-image: url("/public/assets/svg/ic-search.svg");
 }
 
 .bg-\[calc\(100\%-32px\)_center\]{
@@ -2523,12 +2523,12 @@ body{
 }
 
 .after\:content-\[url\(\'\/src\/assets\/svg\/ic-arrow_down\.svg\'\)\]::after{
-  --tw-content: url('/src/assets/svg/ic-arrow_down.svg');
+  --tw-content: url('/public/assets/svg/ic-arrow_down.svg');
   content: var(--tw-content);
 }
 
 .after\:content-\[url\(\'\/src\/assets\/svg\/ic-arrow_right-16x16\.svg\'\)\]::after{
-  --tw-content: url('/src/assets/svg/ic-arrow_right-16x16.svg');
+  --tw-content: url('/public/assets/svg/ic-arrow_right-16x16.svg');
   content: var(--tw-content);
 }
 
@@ -2622,7 +2622,7 @@ body{
 }
 
 .focus\:bg-icSearchFocus:focus{
-  background-image: url("/src/assets/svg/ic-search-dark.svg");
+  background-image: url("/public/assets/svg/ic-search-dark.svg");
 }
 
 .focus\:px-20:focus{
@@ -2677,7 +2677,7 @@ body{
 }
 
 .disabled\:bg-icSearchDisabled:disabled{
-  background-image: url("/src/assets/svg/ic-search-disabled.svg");
+  background-image: url("/public/assets/svg/ic-search-disabled.svg");
 }
 
 .group:focus .group-focus\:inline-flex{

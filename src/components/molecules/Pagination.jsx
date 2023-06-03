@@ -8,7 +8,7 @@ export default function Pagination() {
 				className="text-dark text-base font-semibold border border-paginationOutline bg-transparent min-w-[54px] h-[54px] flex items-center justify-center rounded-lg group is-disabled"
 			>
 				<img
-					src="/src/assets/svg/ic-arrow_left.svg"
+					src="/assets/svg/ic-arrow_left.svg"
 					className="group-[.is-disabled]:filter-paginationOutline"
 					alt=""
 				/>
@@ -33,7 +33,7 @@ export default function Pagination() {
 			</a>
 			<div className="text-dark text-base font-semibold border-transparent bg-transparent min-w-[54px] h-[54px] flex items-center justify-center rounded-lg group">
 				<img
-					src="/src/assets/svg/ic-three-dots.svg"
+					src="/assets/svg/ic-three-dots.svg"
 					className="group-[.is-disabled]:filter-paginationOutline"
 					alt=""
 				/>
@@ -49,7 +49,7 @@ export default function Pagination() {
 				className="text-dark text-base font-semibold border border-paginationOutline bg-transparent min-w-[54px] h-[54px] flex items-center justify-center rounded-lg group"
 			>
 				<img
-					src="/src/assets/svg/ic-arrow_right.svg"
+					src="/assets/svg/ic-arrow_right.svg"
 					className="group-[.is-disabled]:filter-paginationOutline"
 					alt=""
 				/>

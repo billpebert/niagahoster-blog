@@ -17,7 +17,7 @@ export default function GetStarted() {
 				</div>
 			</div>
 			<img
-				src="/src/assets/images/circular_ornament02.svg"
+				src="/assets/images/circular_ornament02.svg"
 				className="absolute top-0 z-0 left-1/2 -translate-x-1/2"
 				alt=""
 			/>

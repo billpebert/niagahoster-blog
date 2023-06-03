@@ -29,14 +29,14 @@ export default function Navbar() {
 				<div className="container flex flex-col lg:flex-row gap-8 w-full">
 					<div className="inline-flex justify-between">
 						<a href="">
-							<img src="/src/assets/images/logo-navbar.svg" alt="" />
+							<img src="/assets/images/logo-navbar.svg" alt="" />
 						</a>
 						<button
 							className="block lg:hidden"
 							id="navToggler"
 							onClick={() => setIsOpen((state) => !state)}
 						>
-							<img src="/src/assets/svg/ic-menu.svg" width="24" height="24" alt="" />
+							<img src="/assets/svg/ic-menu.svg" width="24" height="24" alt="" />
 						</button>
 					</div>
 					{/* <!-- NavLinks --> */}
@@ -53,11 +53,11 @@ export default function Navbar() {
 							</div>
 							<div className="flex flex-col lg:flex-row gap-4 lg:items-center font-semibold text-base lg:ml-auto">
 								<a href="">
-									<img src="/src/assets/svg/ic-cart.svg" width="18" height="19" alt="" />
+									<img src="/assets/svg/ic-cart.svg" width="18" height="19" alt="" />
 								</a>
 								<a
 									href=""
-									className="inline-flex after:content-[url('/src/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]"
+									className="inline-flex after:content-[url('/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]"
 								>
 									ID
 								</a>
