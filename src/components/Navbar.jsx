@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Button from "./atom/Button"
+import { Link } from "react-router-dom"
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false)
@@ -28,9 +29,9 @@ export default function Navbar() {
 			>
 				<div className="container flex flex-col lg:flex-row gap-8 w-full">
 					<div className="inline-flex justify-between">
-						<a href="">
+						<Link to="/">
 							<img src="/assets/images/logo-navbar.svg" alt="" />
-						</a>
+						</Link>
 						<button
 							className="block lg:hidden"
 							id="navToggler"
