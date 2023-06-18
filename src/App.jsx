@@ -1,8 +1,8 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import HomeView from './pages/home/Index'
-import BlogView from './pages/blog/Index'
-import Footer from './components/Footer'
+import Navbar from '@/components/organisms/Navbar'
+import HomeView from '@/pages/home/Index'
+import BlogView from '@/pages/blog/Index'
+import Footer from '@/components/organisms/Footer'
 
 function App() {
 

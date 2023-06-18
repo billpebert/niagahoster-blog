@@ -1,5 +1,5 @@
 import React from "react"
-import Input from "../../components/atom/Input"
+import Input from "@/components/atom/Input"
 
 export default function AsideCategory() {
 	return (

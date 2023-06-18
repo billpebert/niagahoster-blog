@@ -1,5 +1,5 @@
 import React from "react"
-import Badge from "../atom/Badge"
+import Badge from "@/components/atom/Badge"
 
 export default function ArticleDetail({ category, date, duration }) {
 	return (
@@ -11,12 +11,12 @@ export default function ArticleDetail({ category, date, duration }) {
 			)}
 			{date && (
 				<li className="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-					<p className="text-xs leading-6">{date}</p>
+					<p className="text-xs">{date}</p>
 				</li>
 			)}
 			{duration && (
 				<li className="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-					<p className="text-xs leading-6">{duration} min read</p>
+					<p className="text-xs">{duration} min read</p>
 				</li>
 			)}
 		</ul>

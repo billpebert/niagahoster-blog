@@ -1,10 +1,13 @@
 import React from "react"
 import PageInfo from "./PageInfo"
-import SubscribeCard from "../../components/molecules/SubscribeCard"
-import SectionHeading from "../../components/atom/SectionHeading"
-import VerticalArticleCard from "../../components/VerticalArticleCard"
-import TopMenu from "../../components/TopMenu"
+import SubscribeCard from "@/components/molecules/SubscribeCard"
+import SectionHeading from "@/components/atom/SectionHeading"
+import VerticalArticleCard from "@/components/organisms/VerticalArticleCard"
+import TopMenu from "@/components/organisms/TopMenu"
 import BlogThreadDrawer from "./BlogThreadDrawer"
+import Breadcrumb from "@/components/atom/Breadcrumb"
+import BlogActionButtons from "@/components/molecules/BlogActionButtons"
+import AccordionTableOfContent from "@/components/molecules/AccordionTableOfContent"
 
 export default function Index() {
 	return (
@@ -20,26 +23,7 @@ export default function Index() {
 				<main className="px-4 md:px-0 max-w-[635px] w-full mx-auto col-span-7" id="mainArticle">
 					<div className="flex flex-col gap-9">
 						{/* <!-- Breadcrumb --> */}
-						<ul className="inline-flex items-center">
-							<li className="text-xs text-slateGrey after:content-[url('/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
-								<a href="#" className="text-hosterBlue hover:text-darkBlue">
-									Home
-								</a>
-							</li>
-							<li className="text-xs text-slateGrey after:content-[url('/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
-								<a href="#" className="text-hosterBlue hover:text-darkBlue">
-									Tutorial
-								</a>
-							</li>
-							<li className="text-xs text-slateGrey after:content-[url('/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
-								<a href="#" className="text-hosterBlue hover:text-darkBlue">
-									Hosting
-								</a>
-							</li>
-							<li className="text-xs text-slateGrey after:content-[url('/assets/svg/ic-arrow_right-16x16.svg')] after:w-4 after:h-4 after:mx-[6px] last:after:content-none last:after:mx-0 inline-flex items-center">
-								4+ Cara Mudah Cek IP Hosting Website
-							</li>
-						</ul>
+						<Breadcrumb links={[{"route": "#test", "title": "Home"}, {"route": "#tutorial", "title": "Tutorial"}, {"route": "#hosting", "title": "Hosting"}]} lastItem={'4+ Cara Mudah Cek IP Hosting Website'} />
 
 						{/* <!-- Title & Detail --> */}
 						<div className="flex flex-col gap-4">
@@ -50,7 +34,7 @@ export default function Index() {
 							<div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full text-slateGrey">
 								{/* <!-- Article Detail --> */}
 								<ul className="inline-flex">
-									<li className="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
+									<li className="first:before:content-[''] before:content-['•'] before:leading-4 before:mx-3 first:before:mx-0 inline-flex items-center">
 										{/* <!-- Author --> */}
 										<div className="inline-flex gap-3 items-center">
 											<img
@@ -60,38 +44,19 @@ export default function Index() {
 												height="24"
 												alt=""
 											/>
-											<p className="text-xs leading-5">Nida Regita F</p>
+											<p className="text-xs">Nida Regita F</p>
 										</div>
 									</li>
-									<li className="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-										<p className="text-xs leading-6">28 Dec 2021</p>
+									<li className="first:before:content-[''] before:content-['•'] before:leading-4 before:mx-3 first:before:mx-0 inline-flex items-center">
+										<p className="text-xs">28 Dec 2021</p>
 									</li>
-									<li className="first:before:content-[''] before:content-['•'] before:mx-3 first:before:mx-0 inline-flex items-center">
-										<p className="text-xs leading-6">5 min read</p>
+									<li className="first:before:content-[''] before:content-['•'] before:leading-4 before:mx-3 first:before:mx-0 inline-flex items-center">
+										<p className="text-xs">5 min read</p>
 									</li>
 								</ul>
 
 								{/* <!-- Action Button --> */}
-								<div className="inline-flex items-center gap-6">
-									{/* <!-- Thumbs --> */}
-									<a href="#" className="inline-flex items-center gap-3 hover:opacity-50">
-										<img src="/assets/svg/ic-thumb_up.svg" alt="" />
-										<p className="font-semibold text-xs">111</p>
-									</a>
-									{/* <!-- Comments --> */}
-									<button
-										type="button"
-										className="inline-flex items-center gap-3 hover:opacity-50"
-										data-open-thread
-									>
-										<img src="/assets/svg/ic-comment.svg" alt="" />
-										<p className="font-semibold text-xs">4</p>
-									</button>
-									<a href="#" className="inline-flex items-center gap-3 hover:opacity-50">
-										<img src="/assets/svg/ic-share.svg" alt="" />
-										<p className="font-semibold text-xs">Share</p>
-									</a>
-								</div>
+								<BlogActionButtons like={321} replies={45} />
 							</div>
 						</div>
 
@@ -121,100 +86,7 @@ export default function Index() {
 							cara cek IP web hosting di bawah ini!
 						</p>
 
-						<div
-							id="accordion-flush"
-							className="p-8 border border-[#BFC5CC] rounded-[10px]"
-							data-accordion="open"
-							data-active-classes="text-slate-800"
-							data-inactive-classes="text-dark"
-						>
-							<h2 id="accordion-flush-heading-1">
-								<button
-									type="button"
-									className="flex items-center justify-between w-full font-bold text-xl text-left"
-									data-accordion-target="#accordion-flush-body-1"
-									aria-expanded="false"
-									aria-controls="accordion-flush-body-1"
-								>
-									<span>Daftar Isi</span>
-									<svg
-										data-accordion-icon
-										className="w-6 h-6 shrink-0"
-										fill="currentColor"
-										viewBox="0 0 20 20"
-										xmlns="http://www.w3.org/2000/svg"
-									>
-										<path
-											fillRule="evenodd"
-											d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-											clipRule="evenodd"
-										></path>
-									</svg>
-								</button>
-							</h2>
-							<div
-								id="accordion-flush-body-1"
-								className="mt-6 hidden"
-								aria-labelledby="accordion-flush-heading-1"
-							>
-								<div className="flex flex-col gap-2">
-									<a
-										href="#"
-										className="text-sm font-semibold active:font-bold text-dark hover:text-hosterBlue py-3"
-									>
-										Cara Cek IP Hosting
-									</a>
-									<ul className="ml-4 flex flex-col gap-3">
-										<li>
-											<a
-												href="#"
-												className="text-sm font-normal active:font-bold text-dark hover:text-hosterBlue"
-											>
-												Melihat IP Hosting pada email informasi akun hosting
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												className="text-sm font-normal active:font-bold text-dark hover:text-hosterBlue"
-											>
-												Melihat IP Hosting melalui Member Area Niagahoster
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												className="text-sm font-normal active:font-bold text-dark hover:text-hosterBlue"
-											>
-												Melihat IP Hosting melalui cPanel
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												className="text-sm font-normal active:font-bold text-dark hover:text-hosterBlue"
-											>
-												Melihat IP menggunakan CMD
-											</a>
-										</li>
-										<li>
-											<a
-												href="#"
-												className="text-sm font-normal active:font-bold text-dark hover:text-hosterBlue"
-											>
-												Melihat IP dengan web-based tools
-											</a>
-										</li>
-									</ul>
-									<a
-										href="#"
-										className="text-sm font-semibold active:font-bold text-dark hover:text-hosterBlue py-3"
-									>
-										Kesimpulan
-									</a>
-								</div>
-							</div>
-						</div>
+						<AccordionTableOfContent/>
 
 						<h3 className="text-[28px] leading-9 font-bold text-dark">Cara Cek IP Hosting</h3>
 
@@ -283,24 +155,7 @@ export default function Index() {
 						</a>
 
 						{/* <!-- Action Button --> */}
-						<div className="inline-flex items-center gap-4 md:gap-9 w-full">
-							<a href="#" className="inline-flex items-center gap-3 hover:opacity-50">
-								<img src="/assets/svg/ic-thumb_up.svg" className="w-9 h-9" alt="" />
-								<p className="font-semibold text-xl">111</p>
-							</a>
-							<button
-								type="button"
-								className="inline-flex items-center gap-3 hover:opacity-50"
-								data-open-thread
-							>
-								<img src="/assets/svg/ic-comment.svg" className="w-9 h-9" alt="" />
-								<p className="font-semibold text-xl">4</p>
-							</button>
-							<a href="#" className="inline-flex items-center gap-3 ml-auto hover:opacity-50">
-								<img src="/assets/svg/ic-share.svg" className="w-9 h-9" alt="" />
-								<p className="font-semibold text-xl">Share</p>
-							</a>
-						</div>
+						<BlogActionButtons like={321} replies={45} size="lg" />
 					</div>
 				</main>
 			</div>
@@ -328,7 +183,7 @@ export default function Index() {
 				</div>
 			</section>
 
-      <BlogThreadDrawer/>
+			<BlogThreadDrawer />
 		</>
 	)
 }

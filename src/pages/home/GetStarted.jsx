@@ -1,5 +1,5 @@
 import React from "react"
-import Button from "../../components/atom/Button"
+import Button from "@/components/atom/Button"
 
 export default function GetStarted() {
 	return (

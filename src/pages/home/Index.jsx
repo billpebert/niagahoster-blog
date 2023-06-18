@@ -1,14 +1,14 @@
 import React from "react"
-import TopMenu from "../../components/TopMenu"
-import Header from "./Header"
-import AsideCategory from "./AsideCategory"
-import SectionHeading from "../../components/atom/SectionHeading"
-import HorizontalArticleCard from "../../components/HorizontalArticleCard"
-import Button from "../../components/atom/Button"
-import SubscribeCard from "../../components/molecules/SubscribeCard"
-import VerticalArticleCard from "../../components/VerticalArticleCard"
-import Pagination from "../../components/molecules/Pagination"
-import GetStarted from "./GetStarted"
+import TopMenu from "@/components/organisms/TopMenu"
+import Header from "@/pages/home/Header"
+import AsideCategory from "@/pages/home/AsideCategory"
+import SectionHeading from "@/components/atom/SectionHeading"
+import HorizontalArticleCard from "@/components/organisms/HorizontalArticleCard"
+import Button from "@/components/atom/Button"
+import SubscribeCard from "@/components/molecules/SubscribeCard"
+import VerticalArticleCard from "@/components/organisms/VerticalArticleCard"
+import Pagination from "@/components/molecules/Pagination"
+import GetStarted from "@/pages/home/GetStarted"
 
 export default function Index() {
 	return (
@@ -26,7 +26,7 @@ export default function Index() {
 
 			<main className="container">
 				<div className="grid md:grid-cols-12 gap-[30px] 2xl:px-[125px] py-20 relative">
-					<div className="col-span-9">
+					<div className="col-span-9 gap-16 flex flex-col">
 						<section className="flex flex-col gap-[36px]">
 							<SectionHeading title={"Artikel Terbaru"} icon={"ic-electric"} />
 							<div className="flex flex-col gap-12">
@@ -47,7 +47,7 @@ export default function Index() {
 								<Button label={"Lihat Semua Artikel"} type={"text"} />
 							</div>
 						</section>
-						<section className="flex flex-col gap-[36px] mt-16">
+						<section className="flex flex-col gap-[36px]">
 							<SectionHeading title={"Artikel Populer"} icon={"ic-fire"} />
 							<div className="flex flex-col gap-12">
 								<HorizontalArticleCard

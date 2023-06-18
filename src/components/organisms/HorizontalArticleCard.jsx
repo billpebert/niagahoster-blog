@@ -1,6 +1,6 @@
 import React from "react"
-import UserAvatar from "./atom/UserAvatar"
-import ArticleDetail from "./molecules/ArticleDetail"
+import UserAvatar from "@/components/atom/UserAvatar"
+import ArticleDetail from "@/components/molecules/ArticleDetail"
 import { Link } from "react-router-dom"
 
 export default function HorizontalArticleCard({userPhoto, userName, title, textContent, category, date, duration, thumbnail}) {

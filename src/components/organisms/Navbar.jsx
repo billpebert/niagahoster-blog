@@ -1,9 +1,31 @@
 import { useEffect, useState } from "react"
-import Button from "./atom/Button"
+import Button from "@/components/atom/Button"
 import { Link } from "react-router-dom"
+import DropdownButton from "@/components/molecules/DropdownButton"
+import DropdownMenu from "@/components/molecules/DropdownMenu"
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState(false)
+
+	const dropdownItem = 
+		{
+			name: 'ID', // example selected language
+			menus: [
+				{
+					route: '#id',
+					name: 'ID',
+				},
+				{
+					route: '#en',
+					name: 'EN',
+				},
+				{
+					route: '#fr',
+					name: 'FR',
+				},
+			]
+		}
+	
 
 	function scrollEffectBackground() {
 		const navElement = document.getElementById("navigationBar")
@@ -50,18 +72,14 @@ export default function Navbar() {
 								<a href="">Website</a>
 								<a href="">Kemitraan</a>
 								<a href="">Wawasan</a>
-								<a href="">Acara</a>
+								<a href="">Event</a>
 							</div>
 							<div className="flex flex-col lg:flex-row gap-4 lg:items-center font-semibold text-base lg:ml-auto">
 								<a href="">
 									<img src="/assets/svg/ic-cart.svg" width="18" height="19" alt="" />
 								</a>
-								<a
-									href=""
-									className="inline-flex after:content-[url('/assets/svg/ic-arrow_down.svg')] after:ml-[2px] after:max-h-[24px]"
-								>
-									ID
-								</a>
+								<DropdownButton name={'ID'} />
+								<DropdownMenu menus={dropdownItem.menus} dropdownName={dropdownItem.name} size="sm" />
 								<Button label={'Login'} type={'outline'}/>
 							</div>
 						</section>
