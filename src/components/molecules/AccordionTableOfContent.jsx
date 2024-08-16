@@ -17,7 +17,7 @@ export default function AccordionTableOfContent() {
 					aria-expanded="false"
 					aria-controls="accordion-flush-body-1"
 				>
-					<span>Daftar Isi</span>
+					<span>Table of contents</span>
 					<svg
 						data-accordion-icon
 						className="w-6 h-6 shrink-0"
